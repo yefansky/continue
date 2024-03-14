@@ -1,27 +1,17 @@
 import { SerializedContinueConfig } from "..";
 
 export const defaultConfig: SerializedContinueConfig = {
+  "allowAnonymousTelemetry": false,
   models: [
     {
-      title: "GPT-4 Vision (Free Trial)",
-      provider: "free-trial",
-      model: "gpt-4-vision-preview",
-    },
-    {
-      title: "GPT-3.5-Turbo (Free Trial)",
-      provider: "free-trial",
-      model: "gpt-3.5-turbo",
-    },
-    {
-      title: "Gemini Pro (Free Trial)",
-      provider: "free-trial",
-      model: "gemini-pro",
-    },
-    {
-      title: "Codellama 70b (Free Trial)",
-      provider: "free-trial",
-      model: "codellama-70b",
-    },
+      "title": "xsj-DeepSeek-7b",
+      "model": "deepseek-7b",
+      "apiBase": "http://xsjop-ollama.seasungame.com",
+      "completionOptions": {
+        "numThreads": 3
+      },
+      "provider": "ollama"
+    }
   ],
   slashCommands: [
     {
@@ -67,27 +57,17 @@ export const defaultConfig: SerializedContinueConfig = {
 };
 
 export const defaultConfigJetBrains: SerializedContinueConfig = {
+  "allowAnonymousTelemetry": false,
   models: [
     {
-      title: "GPT-4 Vision (Free Trial)",
-      provider: "free-trial",
-      model: "gpt-4-vision-preview",
-    },
-    {
-      title: "GPT-3.5-Turbo (Free Trial)",
-      provider: "free-trial",
-      model: "gpt-3.5-turbo",
-    },
-    {
-      title: "Gemini Pro (Free Trial)",
-      provider: "free-trial",
-      model: "gemini-pro",
-    },
-    {
-      title: "Codellama 70b (Free Trial)",
-      provider: "free-trial",
-      model: "codellama-70b",
-    },
+      "title": "xsj-DeepSeek-7b",
+      "model": "deepseek-7b",
+      "apiBase": "http://xsjop-ollama.seasungame.com",
+      "completionOptions": {
+        "numThreads": 3
+      },
+      "provider": "ollama"
+    },  
   ],
   slashCommands: [
     {
