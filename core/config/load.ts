@@ -202,6 +202,9 @@ async function intermediateToFinalConfig(
       );
       if (!llm) continue;
 
+      // 只允许使用公司内部版本的模型
+      if (!llm.apiBase?.includes("seasun") && !llm.apiBase?.includes("127.0.0.1") && !llm.apiBase?.includes("localhost")) continue;
+
       if (llm.model === "AUTODETECT") {
         try {
           const modelNames = await llm.listModels();

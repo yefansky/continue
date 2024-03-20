@@ -12,6 +12,10 @@ const CustomPostHogProvider = ({ children }: PropsWithChildren) => {
   const [client, setClient] = React.useState<any>(undefined);
 
   useEffect(() => {
+    setClient(undefined);
+    return
+    // 不允许对外发送调试信息
+    /*
     if (allowAnonymousTelemetry === true) {
       posthog.init("phc_JS6XFROuNbhJtVCEdTSYk6gl5ArRrTNMpCcguAXlSPs", {
         api_host: "https://app.posthog.com",
@@ -23,6 +27,7 @@ const CustomPostHogProvider = ({ children }: PropsWithChildren) => {
     } else {
       setClient(undefined);
     }
+    */
   }, [allowAnonymousTelemetry]);
 
   return allowAnonymousTelemetry ? (
